@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Diani Bych Tattoo Studio – custom tattoos and quality tattoo work in Diani, Kenya. Book your tattoo today.">
+<meta name="theme-color" content="#080808">
+<title>Diani Bych Tattoo Studio | Custom Tattoos in Diani</title>
+<style>
+:root{
+  --bg:#070707;--panel:#111;--panel2:#181818;--line:#2b2b2b;
+  --gold:#d7ad45;--gold2:#e2bd5f;--muted:#aaa;--wa:#25d366;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:#eee;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.nav{position:sticky;top:0;z-index:50;background:rgba(7,7,7,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{max-width:1180px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:900;letter-spacing:1.5px;color:var(--gold2);font-size:14px}
+.links{display:flex;gap:20px;flex-wrap:wrap;font-size:14px}
+.links a{color:#ddd}.links a:hover{color:var(--gold2)}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:90px 20px 80px;background:radial-gradient(circle at 50% 8%,#3a2a0b 0,#17130a 25%,#070707 63%);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:620px;height:620px;border:1px solid rgba(215,173,69,.13);border-radius:50%;top:-350px;left:50%;transform:translateX(-50%)}
+.hero:after{content:"";position:absolute;inset:18px;border:1px solid rgba(215,173,69,.14);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:860px}
+.tag{color:var(--gold2);font-weight:800;letter-spacing:3px;font-size:13px}
+.hero h1{font-size:clamp(48px,10vw,100px);line-height:.92;margin:16px 0 8px;color:var(--gold2);letter-spacing:2px}
+.hero h2{font-size:clamp(20px,4vw,35px);margin:0 0 18px;letter-spacing:7px}
+.hero p{max-width:700px;margin:0 auto 30px;color:var(--muted);font-size:18px}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:6px;border:1px solid var(--gold);font-weight:800;transition:.2s}
+.btn.gold{background:var(--gold);color:#090909}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(215,173,69,.15)}
+.quick{max-width:1000px;margin:-35px auto 0;padding:0 20px;position:relative;z-index:5}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.quick-card{background:#101010;border:1px solid #343434;border-radius:12px;padding:18px;text-align:center}
+.quick-card strong{display:block;color:var(--gold2);margin-bottom:3px}
+.quick-card span{font-size:13px;color:var(--muted)}
+section{max-width:1180px;margin:auto;padding:82px 20px}
+h3{font-size:38px;line-height:1.1;margin:0 0 12px;color:var(--gold2)}
+.eyebrow{color:var(--gold2);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.lead{color:var(--muted);max-width:800px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);padding:25px;border-radius:12px}
+.card strong{display:block;color:var(--gold2);font-size:18px;margin-bottom:7px}.card p{margin:0;color:var(--muted)}
+.band{background:#0d0d0d;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:30px}
+.gallery figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gallery img{width:100%;height:330px;object-fit:cover;background:#181818}
+.gallery .wide{grid-column:span 2}.gallery .wide img{height:470px}
+.gallery figcaption{padding:11px 14px;color:#aaa;font-size:13px}
+.review-intro{text-align:center;max-width:760px;margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+.review-card{background:linear-gradient(145deg,#181818,#101010);border:1px solid rgba(215,173,69,.22);border-radius:14px;padding:26px}
+.review-card .stars{font-size:18px;letter-spacing:3px;color:var(--gold2);margin-bottom:10px}
+.review-card blockquote{margin:0;color:#eee;font-size:16px;line-height:1.7}
+.review-card .reviewer{margin-top:16px;color:var(--gold2);font-weight:800}
+.review-card .review-source{font-size:12px;color:#888;margin-top:3px}
+.review-footer{margin-top:28px;text-align:center}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact-box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:28px}
+.contact-box p{color:var(--muted)}
+.contact strong{color:#eee}.gold{color:var(--gold2)}
+.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.social a{border:1px solid #444;padding:10px 14px;border-radius:5px}
+.social a:hover{border-color:var(--gold);color:var(--gold2)}
+.map-btn{margin-top:10px}
+.cta{max-width:1180px;margin:0 auto;padding:72px 20px;text-align:center}
+.cta-box{border:1px solid rgba(215,173,69,.35);background:radial-gradient(circle at 50% 0,#20190a,#111 55%);border-radius:14px;padding:50px 24px}
+.cta-box p{color:var(--muted);max-width:650px;margin:0 auto 24px}
+.small-note{font-size:13px;color:#888;margin-top:16px}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--wa);color:#071b0d;border-radius:999px;padding:13px 17px;font-weight:900;box-shadow:0 8px 25px rgba(0,0,0,.45)}
+footer{text-align:center;padding:30px 20px;color:#888;border-top:1px solid #222;font-size:13px}
+@media(max-width:700px){
+ .links{display:none}.hero{min-height:78vh;padding-top:70px}.hero:after{inset:12px}
+ .quick{margin:-25px auto 0}.quick-grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr}.gallery .wide{grid-column:span 1}
+ .gallery img,.gallery .wide img{height:300px}
+ .contact{grid-template-columns:1fr}section{padding:62px 18px}.cta{padding:52px 18px}
+ .cta-box{padding:38px 18px}.float-wa{right:12px;bottom:12px}
+ h3{font-size:32px}.reviews-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="navin"><div class="brand">DIANI BYCH TATTOO STUDIO</div><div class="links">
+<a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Work</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+</div></div></nav>
+
+<header class="hero"><div class="hero-content">
+<div class="tag">CUSTOM TATTOOS • QUALITY WORK</div><h1>DIANI BYCH</h1><h2>TATTOO STUDIO</h2>
+<p>Bring your idea. I’ll bring it to life with carefully crafted tattoo work in Diani, Kenya.</p>
+<div class="buttons"><a class="btn gold" href="https://wa.me/254721965619">BOOK ON WHATSAPP</a><a class="btn" href="tel:+254721965619">CALL +254 721 965 619</a></div>
+</div></header>
+
+<div class="quick"><div class="quick-grid">
+<div class="quick-card"><strong>📍 Diani, Kenya</strong><span>Diani Links Road</span></div>
+<div class="quick-card"><strong>🕐 Open Daily</strong><span>8:00 AM – 10:00 PM</span></div>
+<div class="quick-card"><strong>💬 Easy Booking</strong><span>WhatsApp or call</span></div>
+</div></div>
+
+<section id="about"><div class="eyebrow">The Studio</div><h3>Personal. Custom. Carefully Crafted.</h3>
+<p class="lead">Diani Bych Tattoo Studio is a personal tattoo studio where you deal directly with the artist from idea and design through to the finished tattoo. I currently work alone, allowing me to give each client my full attention and a personal experience.</p>
+<div class="grid"><div class="card"><strong>Personal Service</strong><p>One artist, direct communication and attention to your individual design.</p></div>
+<div class="card"><strong>Custom Designs</strong><p>Your idea, your style, your tattoo — made for you.</p></div>
+<div class="card"><strong>Clean &amp; Professional</strong><p>A professional studio environment with a strong focus on clean, careful work.</p></div></div></section>
+
+<div class="band"><section id="services"><div class="eyebrow">What I Do</div><h3>Tattoo Services</h3><div class="grid">
+<div class="card"><strong>Custom Tattoos</strong><p>Original designs in the size and style you want.</p></div>
+<div class="card"><strong>Black &amp; Grey</strong><p>Detailed shading, lettering, realism and more.</p></div>
+<div class="card"><strong>Colour Tattoos</strong><p>Colour work designed around your idea and placement.</p></div>
+<div class="card"><strong>Cover Ups</strong><p>New designs planned to transform suitable existing tattoos.</p></div>
+<div class="card"><strong>Tattoo Touch Ups</strong><p>Refresh selected older work and bring it back to life.</p></div>
+<div class="card"><strong>Lettering &amp; More</strong><p>Names, words, symbols and meaningful personal designs.</p></div>
+</div></section></div>
+
+<section id="gallery"><div class="eyebrow">Portfolio</div><h3>Selected Work</h3>
+<p class="lead">A few examples from Diani Bych Tattoo Studio. More work is available on social media.</p>
+<div class="gallery">
+<figure class="wide"><img src="images/Diani Bych Tattoo Studio Poster.png" alt="Diani Bych Tattoo Studio tattoo portfolio poster" loading="lazy"><figcaption>Diani Bych Tattoo Studio — selected work</figcaption></figure>
+<figure><img src="images/Diani Bych Black and Gold Tattoo Poster.png" alt="Black and grey tattoo work by Diani Bych Tattoo Studio" loading="lazy"><figcaption>Black &amp; grey tattoo work</figcaption></figure>
+<figure><img src="images/Diani Bych Tattoo Studio Sign.png" alt="Diani Bych Tattoo Studio storefront sign" loading="lazy"><figcaption>Find the studio in Diani</figcaption></figure>
+</div>
+<p class="small-note">Add your strongest close-up tattoo photos here as your portfolio grows.</p></section>
+
+<div class="band"><section id="reviews"><div class="review-intro">
+<div class="eyebrow">★★★★★ Google Reviews</div><h3>What Our Clients Say</h3>
+<p class="lead">Real words from clients who have experienced Diani Bych Tattoo Studio. Thank you to everyone who has trusted me with their tattoos.</p></div>
+<div class="reviews-grid">
+<article class="review-card"><div class="stars">★★★★★</div><blockquote>“I got exactly what I wanted as a tattoo. Totally recommend this place!”</blockquote><div class="reviewer">— Alexander Perlzmaier</div><div class="review-source">Google Review</div></article>
+<article class="review-card"><div class="stars">★★★★★</div><blockquote>“Maureen is very talented, assuring and super sweet. She did a great job, and made my experience amazing! Would recommend and definitely returning for more.”</blockquote><div class="reviewer">— Muthoni Nduati</div><div class="review-source">Google Review</div></article>
+<article class="review-card"><div class="stars">★★★★★</div><blockquote>“The best tattoo I have done. Maureen is a first-rate professional! Human, gentle and a perfectionist in her work.”</blockquote><div class="reviewer">— Offer Bonovitzky</div><div class="review-source">Google Review</div></article>
+<article class="review-card"><div class="stars">★★★★★</div><blockquote>“For a first tattoo experience, it couldn't have gone any better. Maureen handled me with so much patience and care. A professional and great artist!”</blockquote><div class="reviewer">— Michael Njeru</div><div class="review-source">Google Review</div></article>
+<article class="review-card"><div class="stars">★★★★★</div><blockquote>“She was incredibly kind… Her work is very precise, clean, and professional, and she made sure I was comfortable the whole time.”</blockquote><div class="reviewer">— Frederik Scheffel</div><div class="review-source">Google Review</div></article>
+<article class="review-card"><div class="stars">★★★★★</div><blockquote>“The hygiene in the studio is perfect… She’s very friendly and welcoming as well. Definitely recommend her services!”</blockquote><div class="reviewer">— Bozhidara</div><div class="review-source">Google Review</div></article>
+</div><div class="review-footer"><a class="btn gold" href="https://www.google.com/search?q=Diani+Bych+Tattoo+Studio" target="_blank" rel="noopener">SEE MORE GOOGLE REVIEWS</a></div>
+</section></div>
+
+<div class="band"><div class="cta"><div class="cta-box"><div class="eyebrow">Ready?</div><h3>Ready for Your Tattoo?</h3>
+<p>Tell me what you have in mind and we can discuss the design, placement and appointment.</p>
+<div class="buttons"><a class="btn gold" href="https://wa.me/254721965619">WHATSAPP TO BOOK</a><a class="btn" href="https://wa.me/254748669355">WHATSAPP +254 748 669 355</a></div>
+</div></div></div>
+
+<section id="contact"><div class="contact">
+<div class="contact-box"><div class="eyebrow">Visit</div><h3>Find Me in Diani</h3>
+<p><strong>📍 Diani Links Road</strong><br>Opposite Elephant Plaza<br>Next to Damstem Hardware</p>
+<p><strong>🕐 Open daily: 8:00 AM – 10:00 PM</strong></p>
+<p><a class="gold" href="tel:+254721965619">+254 721 965 619</a><br><a class="gold" href="tel:+254748669355">+254 748 669 355</a></p>
+<a class="btn map-btn" href="https://www.google.com/maps/search/?api=1&query=Diani+Links+Road+Opposite+Elephant+Plaza+Damstem+Hardware" target="_blank" rel="noopener">📍 OPEN LOCATION IN MAPS</a>
+</div>
+<div class="contact-box"><div class="eyebrow">Social</div><h3>Follow the Work</h3><p>See more tattoos, studio content and new work on social media.</p>
+<div class="social"><a href="https://www.instagram.com/dianibychtattoostudio/" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.tiktok.com/@moinker" target="_blank" rel="noopener">TikTok</a>
+<a href="https://www.youtube.com/channel/UCVxqoLflvwvS8tqNjWa4KVw" target="_blank" rel="noopener">YouTube</a>
+<a href="https://www.facebook.com/search/top?q=Diani%20Bych%20Tattoo%20Studio" target="_blank" rel="noopener">Facebook</a></div></div>
+</div></section>
+
+<a class="float-wa" href="https://wa.me/254721965619" aria-label="Book on WhatsApp">💬 Book on WhatsApp</a>
+<footer>© 2026 <span class="gold">Diani Bych Tattoo Studio</span> • CUSTOM TATTOOS • QUALITY WORK</footer>
+</body>
+</html>
